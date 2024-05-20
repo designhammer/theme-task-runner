@@ -22,11 +22,11 @@ Bun.sh allows us to pipe scripts together from stdin/stdout and execute it witho
 
 - style:sass - Dart Sass CLI with stdout.
 - style:replace - Replaces Sass soucremap source urls from absolute to relative.
-- style:postcss - PostCSS CLI using config for plugins settings.
+- style:postcss - PostCSS CLI using postcss.config for plugins settings.
 - style - Brings it altogether using Bun CLI stdin/stdout.
 
 
-## Config
+## BrowserSync Config
 
 **bsync.config file:**
 
@@ -90,7 +90,9 @@ Workspace setting should be located at the root of this project's repo: `/.vscod
 ```
 
 
-### Installing [PHP Code Sniffer](https://docs.designhammer.net/guides/coding-standards/) for Drupal
+## Installing PHP Code Sniffer
+
+### Drupal
 
 Run the following command from the root directory of this repo.
 
@@ -103,7 +105,7 @@ $ vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffe
 To test if phpcs includes the correct sniffer, run `vendor/bin/phpcs -i`, and you should see `Drupal`, and `DrupalPractice` added to the coding standards list.
 
 
-### Installing [PHP Code Sniffer](https://docs.designhammer.net/guides/coding-standards/) for WordPress
+### WordPress
 
 Run the following command from the root directory of this repo.
 
