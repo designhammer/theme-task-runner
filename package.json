@@ -1,0 +1,29 @@
+{
+  "name": "designhammer",
+  "version": "0.1.0",
+  "description": "Custom Drupal/WordPress Theme",
+  "author": "DesignHammer, LLC",
+  "license": "GPL-2.0 AND MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/designhammer"
+  },
+  "scripts": {
+    "serve": "browser-sync start --config './bsync.config.js'",
+    "style:sass": "sass --error-css --embed-source-map ./src/sass/style.scss",
+    "style:replace": "perl -pe 's|file:(.+?)/src|../src|g'",
+    "style:postcss": "postcss --config './postcss.config.js' -o ./assets/css/style.css",
+    "style": "bun style:sass | bun style:replace | bun style:postcss",
+    "script": "uglifyjs ./src/js/script.js --output ./assets/js/script.min.js --compress --source-map 'url=\"script.min.js.map\"'",
+    "build": "bun style && bun script",
+    "watch:style": "nodemon --watch ./src/sass/ --ext scss --exec 'bun style' --quiet",
+    "watch:script": "nodemon --watch ./src/js/ --ext js --exec 'bun script' --quiet",
+    "watch": "concurrently --raw --kill-others 'bun serve' 'bun watch:style' 'bun watch:script'"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 2 version",
+    "Firefox ESR",
+    "not dead"
+  ]
+}

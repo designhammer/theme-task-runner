@@ -1,0 +1,4 @@
+!.eslintrc.json
+!README.md
+node_modules
+bsync.config.js
