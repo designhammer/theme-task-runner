@@ -1,3 +1,5 @@
+*.DS_Store
+
 !.eslintrc.json
 !README.md
 node_modules
