@@ -10,7 +10,7 @@
   },
   "scripts": {
     "serve": "browser-sync start --config './bsync.config.js'",
-    "style:sass": "sass --error-css --embed-source-map ./src/sass/style.scss",
+    "style:sass": "sass --error-css --style=expanded --embed-source-map ./src/sass/style.scss",
     "style:replace": "perl -pe 's|file:(.+?)/src|../src|g'",
     "style:postcss": "postcss --config './postcss.config.js' -o ./assets/css/style.css",
     "style": "bun style:sass | bun style:replace | bun style:postcss",

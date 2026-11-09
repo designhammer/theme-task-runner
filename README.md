@@ -15,13 +15,13 @@ Install the following node modules (npm), in the same directory as this readme f
 We use **bun.sh** for JavaScript runtime. See how to [install bun](https://bun.sh/docs/installation).
 
 ```bash
-bun add -D autoprefixer browser-sync concurrently nodemon postcss postcss-cli postcss-pxtorem sass standard stylelint stylelint-config-sass-guidelines stylelint-order uglify-js
+bun add -D autoprefixer browser-sync concurrently nodemon postcss postcss-cli postcss-pxtorem sass standard stylelint stylelint-config-standard-scss stylelint-order uglify-js
 ```
 
 Bun.sh allows us to pipe scripts together from stdin/stdout and execute it without writing to a temporary file first.
 
 - style:sass - Dart Sass CLI with stdout.
-- style:replace - Replaces Sass soucremap source urls from absolute to relative.
+- style:replace - Replaces Sass soucremap source urls from absolute to relative. Double check `src/` path is the same in your project.
 - style:postcss - PostCSS CLI using postcss.config for plugins settings.
 - style - Brings it altogether using Bun CLI stdin/stdout.
 
@@ -72,7 +72,6 @@ Workspace setting should be located at the root of this project's repo: `/.vscod
     "htdocs/themes/THEMENAME"
   ],
   "stylelint.configBasedir": "htdocs/themes/THEMENAME",
-  "stylelint.configFile": "htdocs/themes/THEMENAME/.stylelintrc.json",
   "stylelint.snippet": [
     "sass",
     "scss"

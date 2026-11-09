@@ -12,7 +12,7 @@
 
 module.exports = {
   port: 3470,
-  proxy: 'local.example.test',
+  proxy: 'https://local.example.test',
   open: false,
   browser: 'google chrome',
   ghostMode: false,
